@@ -72,7 +72,7 @@ ul {list-style: none;
 
 /* Секція Хедер */
 header {
-border-bottom: 1px solid #ECECEC
+    border-bottom: 1px solid #ECECEC
 }
 .page-header {
     background-color: var(--additional-color);
@@ -539,8 +539,36 @@ border-bottom: 1px solid #ECECEC
 
 .card-box:hover,
 .card-box:focus {
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.overlay {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.overlay-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    background-color: var(--accent-color);
+    color: var(--additional-color);
+    transition: var(--anim);
+}
+
+.card-box:hover .overlay-text,
+.card-box:focus .overlay-text {
+    transform: translateY(0);
 }
 
 .card-skills {
